@@ -99,7 +99,7 @@
   <h1>Addition:</h1>
 Also, in addition to developing code and projects, I do Ui, UX design. <a href="https://www.figma.com/@adminpro">Check out my works in Figma</a>.<br>
   By the way, <a href="https://adm1nsys.github.io/inc">visit my website</a>. 
-  <h1>🔥 Boycott on russia - terrorist must be punished! 🇺🇦 <br>
+  <h1>🔥 Boycott on Russia - terrorist must be punished! 🇺🇦 <br>
   RUSSIA IS A TERRORIST STATE!
   </h1>
 
