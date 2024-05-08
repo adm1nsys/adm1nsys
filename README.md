@@ -104,7 +104,7 @@ Also, in addition to developing code and projects, I do Ui, UX design. <a href="
   </h1>
 
   <ul>
-<h3>Ukraine assistance funds</h3>
+<h3>Ukraine help funds</h3>
 <li><a href="https://savelife.in.ua/en/">Come Back Alive Foundation</a><br></li>
 <li><a href="https://prytulafoundation.org/en/">Serhiy Prytula Charity Foundation</a></li>
     
