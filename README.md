@@ -5,7 +5,7 @@
   <center>
 <div aligment="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=adm1nsys&theme=dark_lover&column=4&margin-w=15&margin-h=15&no-bg=true" alt="GitHub Streak" />
+<img src="https://github-profile-trophy.vercel.app/?username=adm1nsys&theme=dark_lover&column=4&margin-w=15&margin-h=15&no-bg=true" alt="GitHub Streak" /><br>
 <img src="https://streak-stats.demolab.com?user=adm1nsys&theme=vue&hide_border=true&background=4E4E4E00&border=EB5454&stroke=EB5454&ring=EB5454&fire=EB5454&currStreakNum=EB5454&sideNums=EB5454&currStreakLabel=EB5454&sideLabels=EB5454&dates=EB5454&excludeDaysLabel=EB5454" alt="GitHub Streak" />
 <br>
 <br>
