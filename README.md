@@ -99,6 +99,18 @@
   <h1>Addition:</h1>
 Also, in addition to developing code and projects, I do Ui, UX design. <a href="https://www.figma.com/@adminpro">Check out my works in Figma</a>.<br>
   By the way, <a href="https://adm1nsys.github.io/inc">visit my website</a>. 
+  <h1>🔥 Boycott on russia - terrorist must be punished! 🇺🇦 <br>
+  RUSSIA IS A TERRORIST STATE!
+  </h1>
+
+  <ul>
+<h3>Ukraine assistance funds</h3>
+<li><a href="https://savelife.in.ua/en/">Come Back Alive Foundation</a><br></li>
+<li><a href="https://prytulafoundation.org/en/">Serhiy Prytula Charity Foundation</a></li>
+    
+  </ul>
+  
+  
 <p align="center">
  <img width="1000" src="assets/github-snake.svg" alt="snake"/>
 </p>
