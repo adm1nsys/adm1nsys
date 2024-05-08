@@ -1,5 +1,6 @@
 ### Hi there 👋
-<img src="https://komarev.com/ghpvc/?username=your-github-adm1nsys&style=for-the-badge&label=Profile+Viewers&abbreviated=true&color=red" alt="GitHub Streak" />
+<img src="https://komarev.com/ghpvc/?username=your-github-adm1nsys&style=for-the-badge&label=Profile+Viewers&abbreviated=false&color=red" alt="GitHub Streak" />
+<!-- <img src="https://komarev.com/ghpvc/?username=your-github-adm1nsys&style=for-the-badge&label=Profile+Viewers&abbreviated=true&color=red" alt="GitHub Streak" /> -->
 
 <h1>My Statistics:</h1>
   <center>
