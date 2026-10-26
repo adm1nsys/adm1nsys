@@ -4,6 +4,8 @@
 const link = (href, text) => `<a href="${href}" target="_blank" rel="noopener">${text}</a>`;
 const SERVERMASTER = link('https://adm1nsys.github.io/ServerMaster/', 'ServerMaster');
 const MAZE = 'https://adm1nsys.github.io/inc/mouse/';
+const CONCORDIA = link('https://github.com/adm1nsys/Concordia', 'Concordia');
+const UF2 = 'https://github.com/adm1nsys/Adafruit-UF2-bootloader-auto-flash';
 
 window.I18N = {
   de: {
@@ -42,7 +44,7 @@ window.I18N = {
 
     aboutTitle: 'Über mich',
     aboutP1: 'Meine ersten öffentlichen Projekte waren Webseiten und kleine Web-Tools. Heute arbeite ich vor allem mit Swift und SwiftUI für Apple-Plattformen und mit C/C++ für Mikrocontroller — in der Arduino IDE und mit dem nRF Connect SDK.',
-    aboutP2: `Was sich automatisieren lässt, automatisiere ich: Bei mir ist fast alles smart, und für meine eigenen Abläufe schreibe ich Werkzeuge — etwa ${SERVERMASTER}, einen Server-Manager für macOS, oder ein Skript, das nRF52-Boards in einem Schritt kompiliert und flasht. Am meisten reizt mich die Stelle, an der Software auf Hardware trifft, wie bei Concordia, einer Matter-Bridge aus zwei Mikrocontrollern.`,
+    aboutP2: `Was sich automatisieren lässt, automatisiere ich: Bei mir ist fast alles smart, und für meine eigenen Abläufe schreibe ich Werkzeuge — etwa ${SERVERMASTER}, einen Server-Manager für macOS, oder ${link(UF2, 'ein Skript')}, das nRF52-Boards in einem Schritt kompiliert und flasht. Am meisten reizt mich die Stelle, an der Software auf Hardware trifft, wie bei ${CONCORDIA}, einer Matter-Bridge aus zwei Mikrocontrollern.`,
     aboutP3: 'Ich mag native Lösungen und Minimalismus: lieber die Möglichkeiten der Plattform nutzen als zusätzliche Abhängigkeiten einbauen. Oberflächen entwerfe ich in Figma, Gehäuse für meine Geräte drucke ich in 3D.',
 
     focusTitle: 'Schwerpunkte',
@@ -161,7 +163,7 @@ window.I18N = {
 
     aboutTitle: 'About me',
     aboutP1: 'My first public projects were websites and small web tools. Today I mostly work with Swift and SwiftUI for Apple platforms and with C/C++ for microcontrollers — in the Arduino IDE and with the nRF Connect SDK.',
-    aboutP2: `If something can be automated, I automate it: almost everything around me is smart, and I write tools for my own workflows — such as ${SERVERMASTER}, a server manager for macOS, or a script that compiles and flashes nRF52 boards in one step. What excites me most is where software meets hardware, as in Concordia, a Matter bridge built from two microcontrollers.`,
+    aboutP2: `If something can be automated, I automate it: almost everything around me is smart, and I write tools for my own workflows — such as ${SERVERMASTER}, a server manager for macOS, or ${link(UF2, 'a script')} that compiles and flashes nRF52 boards in one step. What excites me most is where software meets hardware, as in ${CONCORDIA}, a Matter bridge built from two microcontrollers.`,
     aboutP3: 'I like native solutions and minimalism: using what the platform already offers rather than adding dependencies. I design interfaces in Figma and 3D-print cases for my devices.',
 
     focusTitle: 'Focus areas',
@@ -280,7 +282,7 @@ window.I18N = {
 
     aboutTitle: 'Про мене',
     aboutP1: 'Мої перші публічні проєкти — сайти та невеликі веб-інструменти. Зараз я здебільшого пишу на Swift і SwiftUI для платформ Apple та на C/C++ для мікроконтролерів — в Arduino IDE і з nRF Connect SDK.',
-    aboutP2: `Якщо щось можна автоматизувати — я це автоматизую: у мене майже все розумне, а для власних процесів я пишу інструменти — наприклад, ${SERVERMASTER}, менеджер серверів для macOS, або скрипт, що компілює й прошиває nRF52-плати за один крок. Найбільше мене захоплює місце, де софт зустрічається із залізом, як у Concordia — Matter-мосту з двох мікроконтролерів.`,
+    aboutP2: `Якщо щось можна автоматизувати — я це автоматизую: у мене майже все розумне, а для власних процесів я пишу інструменти — наприклад, ${SERVERMASTER}, менеджер серверів для macOS, або ${link(UF2, 'скрипт')}, що компілює й прошиває nRF52-плати за один крок. Найбільше мене захоплює місце, де софт зустрічається із залізом, як у ${CONCORDIA} — Matter-мосту з двох мікроконтролерів.`,
     aboutP3: 'Люблю нативні рішення й мінімалізм: краще використати можливості платформи, ніж додавати залежності. Інтерфейси проєктую у Figma, корпуси для своїх пристроїв друкую на 3D-принтері.',
 
     focusTitle: 'Напрями',
@@ -399,7 +401,7 @@ window.I18N = {
 
     aboutTitle: 'Обо мне',
     aboutP1: 'Мои первые публичные проекты — сайты и небольшие веб-инструменты. Сейчас я в основном пишу на Swift и SwiftUI для платформ Apple и на C/C++ для микроконтроллеров — в Arduino IDE и с nRF Connect SDK.',
-    aboutP2: `Если что-то можно автоматизировать — я это автоматизирую: у меня почти всё умное, а для собственных процессов я пишу инструменты — например, ${SERVERMASTER}, менеджер серверов для macOS, или скрипт, который компилирует и прошивает nRF52-платы за один шаг. Больше всего меня увлекает то место, где софт встречается с железом, как в Concordia — Matter-мосте из двух микроконтроллеров.`,
+    aboutP2: `Если что-то можно автоматизировать — я это автоматизирую: у меня почти всё умное, а для собственных процессов я пишу инструменты — например, ${SERVERMASTER}, менеджер серверов для macOS, или ${link(UF2, 'скрипт')}, который компилирует и прошивает nRF52-платы за один шаг. Больше всего меня увлекает то место, где софт встречается с железом, как в ${CONCORDIA} — Matter-мосте из двух микроконтроллеров.`,
     aboutP3: 'Люблю нативные решения и минимализм: лучше использовать возможности платформы, чем добавлять зависимости. Интерфейсы проектирую в Figma, корпуса для своих устройств печатаю на 3D-принтере.',
 
     focusTitle: 'Направления',
@@ -514,7 +516,7 @@ window.I18N = {
     birthday: 'Fylder {n} i dag 🎉',
     aboutTitle: 'Om mig',
     aboutP1: 'Mine første offentlige projekter var hjemmesider og små webværktøjer. I dag arbejder jeg mest med Swift og SwiftUI til Apple-platforme og med C/C++ til mikrocontrollere — i Arduino IDE og med nRF Connect SDK.',
-    aboutP2: `Kan noget automatiseres, så automatiserer jeg det: næsten alt omkring mig er smart, og til mine egne arbejdsgange skriver jeg værktøjer — som ${SERVERMASTER}, en servermanager til macOS, eller et script, der kompilerer og flasher nRF52-boards i ét trin. Mest spændende er stedet, hvor software møder hardware, som i Concordia, en Matter-bro bygget af to mikrocontrollere.`,
+    aboutP2: `Kan noget automatiseres, så automatiserer jeg det: næsten alt omkring mig er smart, og til mine egne arbejdsgange skriver jeg værktøjer — som ${SERVERMASTER}, en servermanager til macOS, eller ${link(UF2, 'et script')}, der kompilerer og flasher nRF52-boards i ét trin. Mest spændende er stedet, hvor software møder hardware, som i ${CONCORDIA}, en Matter-bro bygget af to mikrocontrollere.`,
     aboutP3: 'Jeg kan lide native løsninger og minimalisme: hellere bruge det, platformen allerede tilbyder, end tilføje afhængigheder. Brugerflader designer jeg i Figma, og kabinetter til mine enheder 3D-printer jeg.',
     focusTitle: 'Fokusområder',
     focusAutomationTitle: 'Automatisering',
@@ -620,7 +622,7 @@ window.I18N = {
     birthday: 'J’ai {n} ans aujourd’hui 🎉',
     aboutTitle: 'À propos de moi',
     aboutP1: 'Mes premiers projets publics étaient des sites web et de petits outils web. Aujourd’hui, je travaille surtout avec Swift et SwiftUI pour les plateformes Apple et avec C/C++ pour les microcontrôleurs — dans l’Arduino IDE et avec le nRF Connect SDK.',
-    aboutP2: `Si quelque chose peut être automatisé, je l’automatise : presque tout autour de moi est connecté, et j’écris des outils pour mes propres workflows — comme ${SERVERMASTER}, un gestionnaire de serveurs pour macOS, ou un script qui compile et flashe des cartes nRF52 en une seule étape. Ce qui me passionne le plus, c’est le point de rencontre entre logiciel et matériel, comme dans Concordia, un pont Matter construit à partir de deux microcontrôleurs.`,
+    aboutP2: `Si quelque chose peut être automatisé, je l’automatise : presque tout autour de moi est connecté, et j’écris des outils pour mes propres workflows — comme ${SERVERMASTER}, un gestionnaire de serveurs pour macOS, ou ${link(UF2, 'un script')} qui compile et flashe des cartes nRF52 en une seule étape. Ce qui me passionne le plus, c’est le point de rencontre entre logiciel et matériel, comme dans ${CONCORDIA}, un pont Matter construit à partir de deux microcontrôleurs.`,
     aboutP3: 'J’aime les solutions natives et le minimalisme : utiliser ce que la plateforme offre déjà plutôt qu’ajouter des dépendances. Je conçois les interfaces dans Figma et j’imprime en 3D les boîtiers de mes appareils.',
     focusTitle: 'Domaines',
     focusAutomationTitle: 'Automatisation',
