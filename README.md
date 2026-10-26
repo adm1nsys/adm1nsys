@@ -21,7 +21,7 @@ Native where possible, minimal everywhere: Swift for Apple platforms, C/C++ for 
 Matter-over-Thread bridge built only from microcontrollers: an ESP32-C6 with a web panel pulls data from any HTTP API, an nRF54L15 exposes it as Matter devices for Apple Home, Google Home and Alexa.
 
 ### [ServerMaster](https://adm1nsys.github.io/ServerMaster/)
-`Swift` `SwiftUI` `Windows` `CLI`
+`Swift` `SwiftUI` `macOS` `CLI`
 
 Local web server manager for macOS and Windows: static sites, PHP with a database, Node.js apps and custom commands — started, stopped and monitored from one window. Plus a Swift CLI.
 
