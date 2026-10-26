@@ -1,0 +1,68 @@
+name: Deploy website to GitHub Pages
+
+# Only changes to the site trigger a deploy; README and snake commits leave it alone
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - web/**
+      - .github/workflows/deploy-pages.yml
+      - .github/scripts/check-site.mjs
+  pull_request:
+    paths:
+      - web/**
+      - .github/scripts/check-site.mjs
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+# Never cancel a deployment halfway; queue the next one instead
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check links, scripts and translations
+        run: node .github/scripts/check-site.mjs
+
+  deploy:
+    # A failed check keeps the previous version online
+    needs: check
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload website
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./web
+
+      - name: Deploy website
+        id: deployment
+        uses: actions/deploy-pages@v4
