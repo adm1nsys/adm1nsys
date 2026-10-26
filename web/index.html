@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title data-i18n="titleAbout">Heorhii Romanenko — Softwareentwickler</title>
+    <meta name="description" content="Heorhii Romanenko (adm1nsys): Softwareentwicklung, Embedded und Automatisierung — native Apps für macOS und iOS, Firmware für Mikrocontroller, Smart Home.">
+    <meta name="theme-color" content="#070707" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f9f9f9" media="(prefers-color-scheme: light)">
+    <meta property="og:title" content="Heorhii Romanenko — Softwareentwickler">
+    <meta property="og:description" content="Softwareentwicklung · Embedded · Automatisierung">
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap">
+    <link rel="stylesheet" href="assets/css/style.css">
+  </head>
+  <body data-page="about">
+    <div class="backdrop" aria-hidden="true"></div>
+
+    <main>
+      <section class="wrap hero">
+        <div>
+          <p class="eyebrow" data-i18n="heroEyebrow">Softwareentwicklung · Embedded · Automatisierung</p>
+          <h1>Heorhii<br>Romanenko</h1>
+          <p class="hero-lead" data-i18n="heroLead">Ich entwickle Software, die Abläufe automatisiert — vom Entwicklungsprozess bis zu Geräten im Alltag. Dafür baue ich native Apps für macOS und iOS, Firmware für Mikrocontroller und schlanke Weboberflächen.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact" data-i18n="btnContact">Kontakt</a>
+            <a class="btn" href="projects.html" data-i18n="btnProjects">Projekte</a>
+            <a class="btn" href="#" data-cv target="_blank" rel="noopener" data-i18n="btnCv">Lebenslauf (PDF)</a>
+          </div>
+        </div>
+
+        <aside class="card profile" data-profile>
+          <div class="profile-top">
+            <div class="portrait" data-photo>HR</div>
+            <div>
+              <div class="profile-name">Heorhii Romanenko</div>
+              <div class="profile-role">adm1nsys</div>
+              <div class="birthday-note" data-birthday-note hidden></div>
+            </div>
+          </div>
+          <dl class="facts">
+            <div>
+              <dt data-i18n="factBorn">Geboren</dt>
+              <dd><span data-i18n="factBornValue">18.10.2004, Charkiw</span><span class="fact-note" data-i18n="factBornNote">um 2 Uhr nachts</span></dd>
+            </div>
+            <div><dt data-i18n="factLocation">Wohnort</dt><dd data-i18n="factLocationValue">Deutschland</dd></div>
+            <div>
+              <dt data-i18n="factLanguages">Sprachen</dt>
+              <dd>
+                <ul class="fact-list">
+                  <li data-i18n="langNative">Ukrainisch, Russisch — Muttersprache</li>
+                  <li data-i18n="langEnglish">Englisch — B2, sicher im IT-Umfeld</li>
+                  <li data-i18n="langGerman">Deutsch — A2, Deutschkurs an der VHS</li>
+                </ul>
+              </dd>
+            </div>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="wrap section split" id="about">
+        <div>
+          <p class="eyebrow">01</p>
+          <h2 data-i18n="aboutTitle">Über mich</h2>
+        </div>
+        <div class="prose">
+          <p data-i18n="aboutP1">Meine ersten öffentlichen Projekte waren Webseiten und kleine Web-Tools. Heute arbeite ich vor allem mit Swift und SwiftUI für Apple-Plattformen und mit C/C++ für Mikrocontroller — in der Arduino IDE und mit dem nRF Connect SDK.</p>
+          <p data-i18n-html="aboutP2">Was sich automatisieren lässt, automatisiere ich: Bei mir ist fast alles smart, und für meine eigenen Abläufe schreibe ich Werkzeuge — etwa <a href="https://adm1nsys.github.io/ServerMaster/" target="_blank" rel="noopener">ServerMaster</a>, einen Server-Manager für macOS, oder ein Skript, das nRF52-Boards in einem Schritt kompiliert und flasht. Am meisten reizt mich die Stelle, an der Software auf Hardware trifft, wie bei Concordia, einer Matter-Bridge aus zwei Mikrocontrollern.</p>
+          <p data-i18n="aboutP3">Ich mag native Lösungen und Minimalismus: lieber die Möglichkeiten der Plattform nutzen als zusätzliche Abhängigkeiten einbauen. Oberflächen entwerfe ich in Figma, Gehäuse für meine Geräte drucke ich in 3D.</p>
+        </div>
+      </section>
+
+      <section class="wrap section" id="focus">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">02</p>
+            <h2 data-i18n="focusTitle">Schwerpunkte</h2>
+          </div>
+        </div>
+        <div class="grid">
+          <article class="card focus-card">
+            <span class="num">01</span>
+            <h3 data-i18n="focusAutomationTitle">Automatisierung</h3>
+            <p data-i18n="focusAutomationText">Wiederkehrende Abläufe automatisiere ich, statt sie zu wiederholen: Build- und Flash-Prozesse, Release-Pipelines, Smart-Home-Szenarien und Geräte, die von selbst das Richtige tun.</p>
+            <ul class="tags"><li>Smart Home</li><li>CLI</li><li>CI/CD</li></ul>
+          </article>
+          <article class="card focus-card">
+            <span class="num">02</span>
+            <h3 data-i18n="focusAppleTitle">Apple-Plattformen</h3>
+            <p data-i18n="focusAppleText">Native Apps für macOS und iOS mit Swift und SwiftUI. Werkzeuge für Entwickler, Menüleisten-Apps, Safari-Erweiterungen.</p>
+            <ul class="tags"><li>Swift</li><li>SwiftUI</li><li>Xcode</li></ul>
+          </article>
+          <article class="card focus-card">
+            <span class="num">03</span>
+            <h3 data-i18n="focusEmbeddedTitle">Embedded &amp; Smart Home</h3>
+            <p data-i18n="focusEmbeddedText">Firmware in C/C++ mit Arduino und dem nRF Connect SDK für ESP32 und nRF52/nRF54, Matter über Thread, lokale Steuerung ohne Cloud.</p>
+            <ul class="tags"><li>C/C++</li><li>nRF Connect SDK</li><li>Arduino</li><li>Matter</li></ul>
+          </article>
+          <article class="card focus-card">
+            <span class="num">04</span>
+            <h3 data-i18n="focusWebTitle">Web</h3>
+            <p data-i18n="focusWebText">Webseiten mit reinem HTML, CSS und JavaScript, ohne Frameworks und Build-Schritte — schnell, leicht und einfach zu pflegen.</p>
+            <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="wrap section" id="projects">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">03</p>
+            <h2 data-i18n="projectsTitle">Projekte</h2>
+          </div>
+          <a class="text-link" href="projects.html"><span data-i18n="projectsAll">Alle Projekte</span> →</a>
+        </div>
+        <div class="grid">
+          <a class="card project" href="https://github.com/adm1nsys/Concordia" target="_blank" rel="noopener">
+            <h3>Concordia</h3>
+            <p data-i18n="p_concordia">Matter-over-Thread-Bridge nur aus Mikrocontrollern: Ein ESP32-C6 mit Web-Panel holt Daten aus beliebigen HTTP-APIs, ein nRF54L15 stellt sie als Matter-Geräte für Apple Home, Google Home und Alexa bereit.</p>
+            <ul class="tags"><li>C++</li><li>Zephyr</li><li>Matter</li><li>Thread</li></ul>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+          <a class="card project" href="https://github.com/adm1nsys/ServerMaster" target="_blank" rel="noopener">
+            <h3>ServerMaster</h3>
+            <p data-i18n="p_servermaster">Lokaler Webserver-Manager für macOS und Windows: statische Seiten, PHP mit Datenbank, Node.js-Apps und eigene Befehle — in einem Fenster gestartet, gestoppt und überwacht. Dazu eine Swift-CLI.</p>
+            <ul class="tags"><li>Swift</li><li>SwiftUI</li><li>Windows</li><li>CLI</li></ul>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+          <a class="card project" href="https://github.com/adm1nsys/Micro-Matter-Switch" target="_blank" rel="noopener">
+            <h3>Micro Matter Switch</h3>
+            <p data-i18n="p_mms">Kompakter Matter-Schalter auf Basis des XIAO ESP32-C6 mit eigenem 3D-gedrucktem Gehäuse.</p>
+            <ul class="tags"><li>C++</li><li>ESP32-C6</li><li>Matter</li></ul>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+          <a class="card project" href="https://github.com/adm1nsys/Safari-Ai-Extension" target="_blank" rel="noopener">
+            <h3>Safari AI Extension</h3>
+            <p data-i18n="p_safari">Safari-Erweiterung, erzeugt mit Apple Intelligence und von Hand weiterentwickelt. Eine Anleitung für Entwickler unter macOS, iOS und iPadOS 27.</p>
+            <ul class="tags"><li>JavaScript</li><li>Safari</li><li>iOS</li></ul>
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="wrap section" id="tools">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">04</p>
+            <h2 data-i18n="toolsTitle">Werkzeuge</h2>
+          </div>
+        </div>
+        <dl class="rows">
+          <div><dt data-i18n="toolsLangs">Programmiersprachen</dt><dd>Swift · C · C++ · JavaScript · HTML · CSS</dd></div>
+          <div><dt data-i18n="toolsFrameworks">Frameworks &amp; SDKs</dt><dd>SwiftUI · Arduino · nRF Connect SDK (Zephyr) · Matter · Thread</dd></div>
+          <div><dt data-i18n="toolsHardware">Boards</dt><dd>nRF54L15 DK · XIAO nRF54L15 · XIAO ESP32-C6 · ESP8266 DevKit · nice!nano v2 · Luckfox Pico · Luckfox Pico Max</dd></div>
+          <div><dt data-i18n="toolsSoftware">IDE &amp; Tools</dt><dd>Xcode · VS Code · Arduino IDE · <a href="https://adm1nsys.github.io/ServerMaster/" target="_blank" rel="noopener">ServerMaster</a> · Figma · Git</dd></div>
+          <div><dt data-i18n="toolsSystems">Systeme</dt><dd>macOS · iOS · Linux</dd></div>
+        </dl>
+      </section>
+
+      <section class="wrap section" id="education">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">05</p>
+            <h2 data-i18n="eduTitle">Bildung</h2>
+          </div>
+        </div>
+        <ol class="timeline">
+          <li>
+            <span class="timeline-date">2023 – 2027</span>
+            <div>
+              <h3 data-i18n="eduUniTitle">Charkiwer Nationale Universität für Radioelektronik (NURE)</h3>
+              <p data-i18n="eduUniMeta">Bachelor, Fachrichtung 186 „Verlagswesen und Polygrafie“ · 4. Studienjahr · Abschluss voraussichtlich im Sommer 2027</p>
+              <p data-i18n-html="eduUniThesis">Abschlussarbeit: <a href="https://adm1nsys.github.io/ServerMaster/" target="_blank" rel="noopener">ServerMaster</a></p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-date">2020 – 2024</span>
+            <div>
+              <h3 data-i18n="eduCollegeTitle">Fachkolleg für Informationstechnologien der Nationalen Luft- und Raumfahrtuniversität „Charkiwer Luftfahrtinstitut“</h3>
+              <p data-i18n="eduCollegeMeta">Fachlicher Junior-Bachelor, Telekommunikation und Funktechnik (Mobilfunksysteme und -netze) · inkl. vollständiger allgemeiner Sekundarbildung (2022)</p>
+              <p data-i18n-html="eduCollegeThesis">Abschlussprojekt: <a href="https://adm1nsys.github.io/inc/mouse/" target="_blank" rel="noopener">Labyrinth-Generator</a> (Web-App)</p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-date">2020</span>
+            <div>
+              <h3 data-i18n="eduSchoolTitle">Allgemeinbildende Schule Nr. 91, Charkiw</h3>
+              <p data-i18n="eduSchoolMeta">Basis-Sekundarbildung (9 Klassen)</p>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-date" data-i18n="eduNow">aktuell</span>
+            <div>
+              <h3 data-i18n="eduGermanTitle">Deutschkurs, Volkshochschule (VHS)</h3>
+              <p data-i18n="eduGermanMeta">Niveau A2 · laufend</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="wrap section" id="certificates">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">06</p>
+            <h2 data-i18n="certTitle">Zertifikate</h2>
+          </div>
+        </div>
+        <ol class="timeline">
+          <li>
+            <span class="timeline-date">08 – 09.2026</span>
+            <div>
+              <h3>Nordic Semiconductor DevAcademy</h3>
+              <p data-i18n="certNordicMeta">Online-Kurse zu nRF Connect SDK, nRF54L und Bluetooth Low Energy · überprüfbar auf academy.nordicsemi.com</p>
+              <ul class="cert-list">
+                <li><span class="cert-name">nRF54L Series Express</span><span class="cert-date">14.08.2026</span><a class="text-link" href="assets/files/certificates/nordic-nrf54l-series-express.pdf" target="_blank" rel="noopener"><span data-i18n="certView">Ansehen</span> ↗</a></li>
+                <li><span class="cert-name">nRF Connect SDK Fundamentals</span><span class="cert-date">23.08.2026</span><a class="text-link" href="assets/files/certificates/nordic-ncs-fundamentals.pdf" target="_blank" rel="noopener"><span data-i18n="certView">Ansehen</span> ↗</a></li>
+                <li><span class="cert-name">Bluetooth Low Energy Fundamentals</span><span class="cert-date">29.08.2026</span><a class="text-link" href="assets/files/certificates/nordic-ble-fundamentals.pdf" target="_blank" rel="noopener"><span data-i18n="certView">Ansehen</span> ↗</a></li>
+                <li><span class="cert-name">nRF Connect SDK Intermediate</span><span class="cert-date">20.09.2026</span><a class="text-link" href="assets/files/certificates/nordic-ncs-intermediate.pdf" target="_blank" rel="noopener"><span data-i18n="certView">Ansehen</span> ↗</a></li>
+                <li><span class="cert-name">Designing Low-Power Bluetooth LE Products</span><span class="cert-date">27.09.2026</span><a class="text-link" href="assets/files/certificates/nordic-low-power-ble.pdf" target="_blank" rel="noopener"><span data-i18n="certView">Ansehen</span> ↗</a></li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <span class="timeline-date">10.2026</span>
+            <div>
+              <h3 data-i18n="certConfTitle">XI. Internationale wissenschaftlich-praktische Konferenz „Qualilogie des Buches“ — Teilnahme</h3>
+              <p data-i18n="certConfMeta">Nationale Universität „Lwiwer Polytechnikum“, Institut für Polygrafie und Medientechnologien · Lwiw, 15.–16.10.2026 · 15 Std. / 0,5 ECTS</p>
+              <a class="text-link" href="assets/files/certificates/conference-kvalilogiya-knyhy-2026.pdf" target="_blank" rel="noopener"><span data-i18n="certOpen">Zertifikat ansehen (PDF)</span> ↗</a>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="wrap section" id="contact">
+        <div class="card contact">
+          <div class="contact-text">
+            <p class="eyebrow">07</p>
+            <h2 data-i18n="contactTitle">Kontakt</h2>
+            <p data-i18n="contactText">Ob Jobangebot, gemeinsames Projekt oder eine Frage zu einem Repository — schreiben Sie mir gern.</p>
+            <div class="actions">
+              <a class="btn" href="menu.html" data-i18n="menu">Menü</a>
+              <a class="btn" href="links.html" data-i18n="btnAllLinks">Alle Links</a>
+            </div>
+          </div>
+          <div class="link-list" data-contact-links></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/config.js"></script>
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
