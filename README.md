@@ -52,6 +52,8 @@ Safari extension generated with Apple Intelligence and then edited by hand. A gu
 
 **Nordic Semiconductor DevAcademy:** nRF54L Series Express · nRF Connect SDK Fundamentals · nRF Connect SDK Intermediate · Bluetooth Low Energy Fundamentals · Designing Low-Power Bluetooth LE Products
 
+**Heilbronn University of Applied Sciences (DAAD):** Engineering and Computer Graphics, 51 h — [certificate](web/assets/files/certificates/hhn-daad-engineering-graphics.pdf) · [coursework](https://github.com/adm1nsys/education)
+
 <sub>🇺🇦 Support Ukraine: [Come Back Alive](https://savelife.in.ua/en/) · [Serhiy Prytula Charity Foundation](https://prytulafoundation.org/en/)</sub>
 
 <p align="center">

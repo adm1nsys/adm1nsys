@@ -3,7 +3,7 @@
 // Keys used with data-i18n-html may contain links.
 const link = (href, text) => `<a href="${href}" target="_blank" rel="noopener">${text}</a>`;
 const SERVERMASTER = link('https://adm1nsys.github.io/ServerMaster/', 'ServerMaster');
-const MAZE = 'https://adm1nsys.github.io/inc/mouse/';
+const MAZE = 'https://adm1nsys.github.io/education/college/2024-diploma-micromouse/';
 const CONCORDIA = link('https://github.com/adm1nsys/Concordia', 'Concordia');
 const UF2 = 'https://github.com/adm1nsys/Adafruit-UF2-bootloader-auto-flash';
 
@@ -85,6 +85,8 @@ window.I18N = {
     eduNow: 'aktuell',
     certConfTitle: 'XI. Internationale wissenschaftlich-praktische Konferenz „Qualilogie des Buches“ — Teilnahme',
     certConfMeta: 'Nationale Universität „Lwiwer Polytechnikum“, Institut für Polygrafie und Medientechnologien · Lwiw, 15.–16.10.2026 · 15 Std. / 0,5 ECTS',
+    certHhnTitle: 'Engineering and Computer Graphics — Teilnahmezertifikat',
+    certHhnMeta: 'Hochschule Heilbronn, Projekt HHN-DITO II · gefördert vom DAAD aus Mitteln des BMBF · 51 Std.',
     certOpen: 'Zertifikat ansehen (PDF)',
 
     contactTitle: 'Kontakt',
@@ -118,11 +120,8 @@ window.I18N = {
     p_uf2: 'Kompiliert, verpackt und flasht Firmware für nRF52-Boards mit Adafruit-UF2-Bootloader in einem Schritt.',
     p_ild: 'Mein eigener Deutsch-Trainer im Browser: Alphabet, Aussprache, Artikel, haben/sein, Pronomen, Konjugation und Wortschatz. Derzeit pausiert.',
     p_http: 'Shell-Assistent für macOS, der einen lokalen HTTP-Server einrichtet, startet und verwaltet.',
-    p_lab: 'Titelseite und Inhaltsverzeichnis meiner Laborarbeiten im Fach „Web-Programmierung“.',
-    p_list: 'Laborarbeit: HTML-Listen, Textstruktur und Gestaltung mit CSS.',
-    p_form: 'Laborarbeit: HTML-Formular mit verschiedenen Eingabetypen.',
-    p_calc: 'Laborarbeit: Taschenrechner in HTML, CSS und JavaScript.',
-    groupLabs: 'Laborarbeiten am Kolleg',
+    groupLabs: 'Studienarbeiten',
+    p_edu: 'Ausgewählte Arbeiten aus Kolleg und Universität: Computernetze in Cisco Packet Tracer, AutoCAD-Zeichnungen, Abschlussprojekt, Magazinlayout.',
     certView: 'Ansehen',
     p_grid: 'Rechner für modulare Layout-Raster im Webdesign.'
   },
@@ -204,6 +203,8 @@ window.I18N = {
     eduNow: 'now',
     certConfTitle: '11th International Scientific and Practical Conference “Qualilogy of the Book” — participation',
     certConfMeta: 'Lviv Polytechnic National University, Institute of Printing and Media Technologies · Lviv, 15–16 Oct 2026 · 15 hours / 0.5 ECTS',
+    certHhnTitle: 'Engineering and Computer Graphics — certificate of participation',
+    certHhnMeta: 'Heilbronn University of Applied Sciences, project HHN-DITO II · funded by the DAAD with grants from the BMBF · 51 hours',
     certOpen: 'View certificate (PDF)',
 
     contactTitle: 'Contact',
@@ -237,11 +238,8 @@ window.I18N = {
     p_uf2: 'Compiles, packages and flashes firmware for nRF52 boards with the Adafruit UF2 bootloader in one step.',
     p_ild: 'My own German trainer in the browser: alphabet, pronunciation, articles, haben/sein, pronouns, conjugation and vocabulary. Currently on hold.',
     p_http: 'Shell assistant for macOS that sets up, starts and manages a local HTTP server.',
-    p_lab: 'Title page and contents of my lab work for the “Web Programming” course.',
-    p_list: 'Lab work: HTML lists, text structure and CSS styling.',
-    p_form: 'Lab work: HTML form with different input types.',
-    p_calc: 'Lab work: calculator in HTML, CSS and JavaScript.',
-    groupLabs: 'College lab work',
+    groupLabs: 'Coursework',
+    p_edu: 'Selected work from college and university: computer networks in Cisco Packet Tracer, AutoCAD drawings, diploma project, magazine layout.',
     certView: 'View',
     p_grid: 'Calculator for modular layout grids in web design.'
   },
@@ -323,6 +321,8 @@ window.I18N = {
     eduNow: 'зараз',
     certConfTitle: 'XI Міжнародна науково-практична конференція «Квалілогія книги» — участь',
     certConfMeta: 'НУ «Львівська політехніка», Інститут поліграфії та медійних технологій · Львів, 15–16.10.2026 · 15 годин / 0,5 ЄКТС',
+    certHhnTitle: 'Engineering and Computer Graphics — сертифікат учасника',
+    certHhnMeta: 'Hochschule Heilbronn, проєкт HHN-DITO II · фінансування DAAD за кошти BMBF · 51 година',
     certOpen: 'Переглянути сертифікат (PDF)',
 
     contactTitle: 'Контакти',
@@ -356,11 +356,8 @@ window.I18N = {
     p_uf2: 'Компілює, пакує й прошиває nRF52-плати з бутлоадером Adafruit UF2 за один крок.',
     p_ild: 'Мій власний тренажер німецької в браузері: алфавіт, вимова, артиклі, haben/sein, займенники, відмінювання та словник. Зараз на паузі.',
     p_http: 'Shell-помічник для macOS, що налаштовує, запускає й керує локальним HTTP-сервером.',
-    p_lab: 'Титульна сторінка та зміст моїх лабораторних робіт з предмета «WEB-програмування».',
-    p_list: 'Лабораторна: HTML-списки, структура тексту та оформлення CSS.',
-    p_form: 'Лабораторна: HTML-форма з різними типами полів.',
-    p_calc: 'Лабораторна: калькулятор на HTML, CSS і JavaScript.',
-    groupLabs: 'Лабораторні в коледжі',
+    groupLabs: 'Навчальні роботи',
+    p_edu: 'Вибрані роботи з коледжу та університету: комп’ютерні мережі в Cisco Packet Tracer, креслення в AutoCAD, дипломний проєкт, верстка журналу.',
     certView: 'Переглянути',
     p_grid: 'Калькулятор модульних сіток для веб-дизайну.'
   },
@@ -442,6 +439,8 @@ window.I18N = {
     eduNow: 'сейчас',
     certConfTitle: 'XI Международная научно-практическая конференция «Квалилогия книги» — участие',
     certConfMeta: 'НУ «Львовская политехника», Институт полиграфии и медийных технологий · Львов, 15–16.10.2026 · 15 часов / 0,5 ECTS',
+    certHhnTitle: 'Engineering and Computer Graphics — сертификат участника',
+    certHhnMeta: 'Hochschule Heilbronn, проект HHN-DITO II · финансирование DAAD из средств BMBF · 51 час',
     certOpen: 'Открыть сертификат (PDF)',
 
     contactTitle: 'Контакты',
@@ -475,11 +474,8 @@ window.I18N = {
     p_uf2: 'Компилирует, упаковывает и прошивает nRF52-платы с загрузчиком Adafruit UF2 за один шаг.',
     p_ild: 'Мой собственный тренажёр немецкого в браузере: алфавит, произношение, артикли, haben/sein, местоимения, спряжение и словарь. Сейчас на паузе.',
     p_http: 'Shell-помощник для macOS, который настраивает, запускает и управляет локальным HTTP-сервером.',
-    p_lab: 'Титульная страница и содержание моих лабораторных работ по предмету «WEB-программирование».',
-    p_list: 'Лабораторная: HTML-списки, структура текста и оформление CSS.',
-    p_form: 'Лабораторная: HTML-форма с разными типами полей.',
-    p_calc: 'Лабораторная: калькулятор на HTML, CSS и JavaScript.',
-    groupLabs: 'Лабораторные в колледже',
+    groupLabs: 'Учебные работы',
+    p_edu: 'Избранные работы из колледжа и университета: компьютерные сети в Cisco Packet Tracer, чертежи в AutoCAD, дипломный проект, вёрстка журнала.',
     certView: 'Открыть',
     p_grid: 'Калькулятор модульных сеток для веб-дизайна.'
   },
@@ -553,6 +549,8 @@ window.I18N = {
     eduNow: 'nu',
     certConfTitle: 'XI. internationale videnskabelig-praktiske konference „Bogens kvalilogi“ — deltagelse',
     certConfMeta: 'Lviv Polytechnic National University, Institut for grafisk produktion og medieteknologi · Lviv, 15.–16.10.2026 · 15 timer / 0,5 ECTS',
+    certHhnTitle: 'Engineering and Computer Graphics — deltagerbevis',
+    certHhnMeta: 'Heilbronn University of Applied Sciences, projekt HHN-DITO II · finansieret af DAAD med midler fra BMBF · 51 timer',
     certOpen: 'Se certifikat (PDF)',
     contactTitle: 'Kontakt',
     contactText: 'Et jobtilbud, et fælles projekt eller et spørgsmål om et af mine repositories — skriv endelig.',
@@ -581,11 +579,8 @@ window.I18N = {
     p_uf2: 'Kompilerer, pakker og flasher firmware til nRF52-boards med Adafruit UF2-bootloader i ét trin.',
     p_ild: 'Min egen tysktræner i browseren: alfabet, udtale, artikler, haben/sein, pronominer, bøjning og ordforråd. Sat på pause.',
     p_http: 'Shell-assistent til macOS, der opsætter, starter og administrerer en lokal HTTP-server.',
-    p_lab: 'Forside og indholdsfortegnelse til mine laboratorieopgaver i faget „Webprogrammering“.',
-    p_list: 'Laboratorieopgave: HTML-lister, tekststruktur og styling med CSS.',
-    p_form: 'Laboratorieopgave: HTML-formular med forskellige inputtyper.',
-    p_calc: 'Laboratorieopgave: lommeregner i HTML, CSS og JavaScript.',
-    groupLabs: 'Laboratorieopgaver på college',
+    groupLabs: 'Studieopgaver',
+    p_edu: 'Udvalgte arbejder fra college og universitet: computernetværk i Cisco Packet Tracer, AutoCAD-tegninger, afgangsprojekt, magasinlayout.',
     certView: 'Se',
     p_grid: 'Beregner til modulære layoutgrids i webdesign.'
   },
@@ -659,6 +654,8 @@ window.I18N = {
     eduNow: 'actuel',
     certConfTitle: 'XIe Conférence scientifique et pratique internationale « Qualilogie du livre » — participation',
     certConfMeta: 'Université nationale Polytechnique de Lviv, Institut d’imprimerie et des technologies des médias · Lviv, 15–16/10/2026 · 15 h / 0,5 ECTS',
+    certHhnTitle: 'Engineering and Computer Graphics — attestation de participation',
+    certHhnMeta: 'Université des sciences appliquées de Heilbronn, projet HHN-DITO II · financé par le DAAD avec des fonds du BMBF · 51 h',
     certOpen: 'Voir le certificat (PDF)',
     contactTitle: 'Contact',
     contactText: 'Une offre d’emploi, un projet commun ou une question sur l’un de mes dépôts — n’hésitez pas à m’écrire.',
@@ -687,11 +684,8 @@ window.I18N = {
     p_uf2: 'Compile, empaquette et flashe le firmware des cartes nRF52 avec le bootloader Adafruit UF2 en une seule étape.',
     p_ild: 'Mon propre entraîneur d’allemand dans le navigateur : alphabet, prononciation, articles, haben/sein, pronoms, conjugaison et vocabulaire. En pause pour l’instant.',
     p_http: 'Assistant shell pour macOS qui configure, lance et gère un serveur HTTP local.',
-    p_lab: 'Page de titre et sommaire de mes travaux pratiques du cours « Programmation web ».',
-    p_list: 'Travail pratique : listes HTML, structure du texte et mise en forme CSS.',
-    p_form: 'Travail pratique : formulaire HTML avec différents types de champs.',
-    p_calc: 'Travail pratique : calculatrice en HTML, CSS et JavaScript.',
-    groupLabs: 'Travaux pratiques au collège',
+    groupLabs: 'Travaux d’études',
+    p_edu: 'Travaux choisis du collège et de l’université : réseaux informatiques dans Cisco Packet Tracer, dessins AutoCAD, projet de fin d’études, mise en page d’un magazine.',
     certView: 'Voir',
     p_grid: 'Calculateur de grilles de mise en page modulaires pour le web design.'
   }
