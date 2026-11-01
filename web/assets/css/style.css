@@ -458,11 +458,13 @@ h3 { font-size: 1.0625rem; line-height: 1.3; letter-spacing: -0.01em; }
 }
 .facts dd { margin: 0; font-size: 15px; overflow-wrap: anywhere; }
 .fact-note {
-  display: block;
+  /* The time of birth only shows on the birthday (see birthday() in app.js) */
+  display: none;
   margin-top: 2px;
   font: 400 12px/1.4 var(--mono);
   color: var(--muted);
 }
+.is-birthday .fact-note { display: block; }
 .fact-list { margin: 0; padding: 0; list-style: none; }
 .fact-list li + li { margin-top: 4px; }
 
