@@ -174,17 +174,24 @@
           ${r.body ? `<div class="release-notes">${notes(r.body)}</div>` : ''}
           <div class="release-files">
             ${r.assets.map((a) => `<a class="btn btn-sm${i === 0 ? ' btn-primary' : ''}" href="${esc(a.browser_download_url)}">${icon('down', 'icon icon-sm')}${esc(a.name)}</a>`).join('')}
-            <a class="btn btn-sm" href="${esc(r.zipball_url.replace('api.github.com/repos', 'github.com').replace('/zipball/', '/archive/refs/tags/'))}.zip">${esc(t('sourceZip'))}</a>
+            <a class="btn btn-sm${i === 0 && !r.assets.length ? ' btn-primary' : ''}" href="${esc(sourceZip(r))}">${esc(t('sourceZip'))}</a>
           </div>
         </div>
       </details>`).join('')}</div>
       <p class="meta">${historyLink}</p>`;
   }
 
-  // A [data-download="file name"] button points at that file in the newest release that has it
+  const sourceZip = (r) => `https://github.com/${P.repo}/archive/refs/tags/${encodeURIComponent(r.tag_name)}.zip`;
+
+  // A [data-download="file name"] button points at that file in the newest release that has it;
+  // data-download="source" points at the newest release's source code
   function bindDownloads() {
     if (!Array.isArray(releases)) return;
     document.querySelectorAll('[data-download]').forEach((el) => {
+      if (el.dataset.download === 'source') {
+        if (releases[0]) el.href = sourceZip(releases[0]);
+        return;
+      }
       for (const r of releases) {
         const asset = r.assets.find((a) => a.name === el.dataset.download);
         if (asset) { el.href = asset.browser_download_url; break; }
