@@ -59,17 +59,23 @@
       </div>`;
     document.body.prepend(header);
 
+    // The license links to the page's own explanation when it has one (<details id="license">)
+    const license = document.getElementById('license')
+      ? `<a href="#license" data-open-license>${esc(P.license)}</a>` : esc(P.license);
     const footer = document.createElement('footer');
     footer.className = 'site-footer';
     footer.innerHTML = `
       <div class="wrap footer-row">
-        <span>© ${new Date().getFullYear()} Heorhii Romanenko${P.license ? ` · ${esc(P.license)}` : ''}</span>
+        <span>© ${new Date().getFullYear()} Heorhii Romanenko${P.license ? ` · ${license}` : ''}</span>
         <span class="footer-links">
           <a href="${HOME}">adm1nsys</a>
           <a href="https://github.com/${P.repo}" target="_blank" rel="noopener" data-ui="source"></a>
         </span>
       </div>`;
     document.body.append(footer);
+    footer.querySelector('[data-open-license]')?.addEventListener('click', () => {
+      document.getElementById('license').open = true;
+    });
 
     // Keep "came from adm1nsys" when moving between pages of the same project site
     if (fromHome) {
