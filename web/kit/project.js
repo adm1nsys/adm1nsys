@@ -43,18 +43,19 @@
     const back = fromHome
       ? `<a class="chip chip-back" href="${HOME}projects.html">${icon('left', 'icon icon-sm')}<span data-ui="back"></span></a>`
       : '';
+    // One row on the left: brand, language, back — the language chip stays put either way
     header.innerHTML = `
       <div class="header-left">
         <a class="brand" href="${HOME}">adm1nsys</a>
-        ${back}
-      </div>
-      <div class="lang">
-        <button class="chip lang-toggle" type="button" aria-haspopup="true" aria-expanded="false">
-          <span data-lang-current></span>${icon('chevron', 'icon icon-sm')}
-        </button>
-        <div class="lang-list" hidden>
-          ${P.langs.map((l) => `<button type="button" data-set-lang="${l}">${LABELS[l]}</button>`).join('')}
+        <div class="lang">
+          <button class="chip lang-toggle" type="button" aria-haspopup="true" aria-expanded="false">
+            <span data-lang-current></span>${icon('chevron', 'icon icon-sm')}
+          </button>
+          <div class="lang-list" hidden>
+            ${P.langs.map((l) => `<button type="button" data-set-lang="${l}">${LABELS[l]}</button>`).join('')}
+          </div>
         </div>
+        ${back}
       </div>`;
     document.body.prepend(header);
 

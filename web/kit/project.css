@@ -3,7 +3,7 @@
 
 .project-page .page-head { padding-bottom: clamp(1.5rem, 4vw, 2.5rem); }
 .project-page h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
-.project-page .lead { max-width: 44rem; margin: 1rem 0 1.5rem; font-size: 1.125rem; color: var(--text-2); }
+.project-page .page-head p.lead { max-width: 44rem; margin: 1rem 0 2.25rem; font-size: 1.125rem; color: var(--text-2); }
 .project-page .actions { margin-bottom: 0.5rem; }
 .project-page .meta,
 .project-page .page-head p.meta { margin: 0.75rem 0 0; font: 400 12px/1.5 var(--mono); color: var(--muted); }
@@ -77,5 +77,3 @@ th { font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: 
 .release-notes ul { padding-left: 1.25rem; }
 .release-files { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
-/* The language switch sits on the right here, so its list opens to the left */
-.site-header > .lang .lang-list { left: auto; right: 0; }
