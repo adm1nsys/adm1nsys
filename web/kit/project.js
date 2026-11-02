@@ -59,9 +59,11 @@
       </div>`;
     document.body.prepend(header);
 
-    // The license links to the page's own explanation when it has one (<details id="license">)
+    // The license links to the page's own explanation when it has one (<details id="license">),
+    // otherwise to the LICENSE file in the repository
     const license = document.getElementById('license')
-      ? `<a href="#license" data-open-license>${esc(P.license)}</a>` : esc(P.license);
+      ? `<a href="#license" data-open-license>${esc(P.license)}</a>`
+      : `<a href="https://github.com/${P.repo}/blob/HEAD/LICENSE" target="_blank" rel="noopener">${esc(P.license)}</a>`;
     const footer = document.createElement('footer');
     footer.className = 'site-footer';
     footer.innerHTML = `
