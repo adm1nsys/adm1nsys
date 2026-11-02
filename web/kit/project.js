@@ -10,10 +10,10 @@
   const UI = {
     de: { back: 'Projekte', source: 'Quellcode auf GitHub', latest: 'Aktuell', files: 'Dateien',
       sourceZip: 'Quellcode (zip)', noReleases: 'Noch keine Releases — die aktuelle Fassung liegt im Hauptzweig.',
-      history: 'Änderungsverlauf', loadError: 'Versionen konnten nicht geladen werden.', language: 'Sprache' },
+      history: 'Änderungsverlauf', more: 'Mehr anzeigen', less: 'Weniger anzeigen', loadError: 'Versionen konnten nicht geladen werden.', language: 'Sprache' },
     en: { back: 'Projects', source: 'Source on GitHub', latest: 'Latest', files: 'Files',
       sourceZip: 'Source code (zip)', noReleases: 'No releases yet — the current version is on the main branch.',
-      history: 'Change history', loadError: 'Could not load the versions.', language: 'Language' }
+      history: 'Change history', more: 'Show more', less: 'Show less', loadError: 'Could not load the versions.', language: 'Language' }
   };
 
   const store = {
@@ -178,7 +178,8 @@
           <span class="release-date">${date(r.published_at)}</span>
         </summary>
         <div class="release-body">
-          ${r.body ? `<div class="release-notes">${notes(r.body)}</div>` : ''}
+          ${r.body ? `<div class="release-notes"><div class="release-notes-text">${notes(r.body)}</div>
+            <button class="notes-toggle" type="button" hidden aria-expanded="false">${esc(t('more'))}</button></div>` : ''}
           <div class="release-files">
             ${r.assets.map((a) => `<a class="btn btn-sm${i === 0 ? ' btn-primary' : ''}" href="${esc(a.browser_download_url)}">${icon('down', 'icon icon-sm')}${esc(a.name)}</a>`).join('')}
             <a class="btn btn-sm${i === 0 && !r.assets.length ? ' btn-primary' : ''}" href="${esc(sourceZip(r))}">${esc(t('sourceZip'))}</a>
@@ -186,6 +187,32 @@
         </div>
       </details>`).join('')}</div>
       <p class="meta">${historyLink}</p>`;
+    root.querySelectorAll('.release').forEach((release) => {
+      clampNotes(release);
+      release.addEventListener('toggle', () => clampNotes(release));
+    });
+  }
+
+  // Long release notes show their first lines fading out, like a video description; the button
+  // slides the rest open. Measured when the release is open, since a closed one has no height.
+  const NOTES_PEEK = 140;
+  function clampNotes(release) {
+    const box = release.querySelector('.release-notes');
+    if (!release.open || !box || box.dataset.ready) return;
+    const text = box.querySelector('.release-notes-text');
+    const button = box.querySelector('.notes-toggle');
+    if (text.scrollHeight <= NOTES_PEEK + 40) return;
+    box.dataset.ready = '1';
+    box.classList.add('is-clamped');
+    text.style.maxHeight = `${NOTES_PEEK}px`;
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      const open = button.getAttribute('aria-expanded') !== 'true';
+      text.style.maxHeight = `${open ? text.scrollHeight : NOTES_PEEK}px`;
+      box.classList.toggle('is-open', open);
+      button.setAttribute('aria-expanded', String(open));
+      button.textContent = t(open ? 'less' : 'more');
+    });
   }
 
   const sourceZip = (r) => `https://github.com/${P.repo}/archive/refs/tags/${encodeURIComponent(r.tag_name)}.zip`;
