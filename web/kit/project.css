@@ -38,7 +38,7 @@ code { font: 400 0.9em var(--mono); }
 
 /* Collapsible sections */
 .folds { display: grid; gap: 0.625rem; margin-bottom: clamp(2rem, 5vw, 3rem); }
-.fold { padding: 0; }
+.fold { padding: 0; min-width: 0; }   /* a grid item may shrink below a long <pre>, which then scrolls */
 .fold > summary {
   display: flex;
   align-items: center;
