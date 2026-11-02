@@ -11,6 +11,10 @@
 /* Back to the projects list — only when the visitor came from adm1nsys */
 .chip-back { gap: 2px; }
 
+/* Screenshot of the project, framed like the cards */
+.shot { margin: 0 0 clamp(2rem, 5vw, 3rem); padding: 0; overflow: hidden; }
+.shot img { width: 100%; height: auto; }
+
 /* Terminal-style sample */
 .terminal {
   margin: 0 0 clamp(2rem, 5vw, 3rem);

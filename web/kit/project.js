@@ -1,7 +1,7 @@
 // Shared chrome for project sites (adm1nsys.github.io/<repo>/): header, language switch,
 // footer and the version history. A page sets window.PROJECT before loading this file:
 //   { repo: 'adm1nsys/<repo>', name, license, langs: ['de', 'en'], i18n: { de: {...}, en: {...} } }
-// Texts: data-i18n="key" (text) and data-i18n-html="key" (markup) on any element.
+// Texts: data-i18n="key" (text), data-i18n-html="key" (markup), data-i18n-alt="key" (image alt).
 (() => {
   const P = window.PROJECT;
   const HOME = '/adm1nsys/';
@@ -113,6 +113,7 @@
     document.querySelectorAll('[data-i18n]').forEach((el) => { el.textContent = t(el.dataset.i18n); });
     document.querySelectorAll('[data-i18n-html]').forEach((el) => { el.innerHTML = t(el.dataset.i18nHtml); });
     document.querySelectorAll('[data-ui]').forEach((el) => { el.textContent = t(el.dataset.ui); });
+    document.querySelectorAll('[data-i18n-alt]').forEach((el) => { el.alt = t(el.dataset.i18nAlt); });
     document.querySelector('[data-lang-current]').textContent = LABELS[lang];
     document.querySelector('.lang-toggle').setAttribute('aria-label', t('language'));
     document.querySelectorAll('[data-set-lang]').forEach((b) => b.classList.toggle('is-active', b.dataset.setLang === lang));
