@@ -10,6 +10,8 @@
 
 /* Back to the projects list — only when the visitor came from adm1nsys */
 .chip-back { gap: 2px; }
+/* With a second back chip (sub-pages) the row can get too wide for a phone: let it wrap */
+.project-page .header-left { flex-wrap: wrap; row-gap: 0.5rem; min-width: 0; }
 
 /* Screenshot of the project, framed like the cards */
 .shot { margin: 0 0 clamp(2rem, 5vw, 3rem); padding: 0; overflow: hidden; }

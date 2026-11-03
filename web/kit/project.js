@@ -1,7 +1,10 @@
 // Shared chrome for project sites (adm1nsys.github.io/<repo>/): header, language switch,
 // footer and the version history. A page sets window.PROJECT before loading this file:
 //   { repo: 'adm1nsys/<repo>', name, license, langs: ['de', 'en'], i18n: { de: {...}, en: {...} } }
+// Sub-pages of a project site add up: { href, de, en } — a chip in the header back to their overview.
 // Texts: data-i18n="key" (text), data-i18n-html="key" (markup), data-i18n-alt="key" (image alt).
+// Pages written in German can instead carry the English twin on the element: data-en (text) or
+// data-en-html (markup), and <html data-title-en> for the title; i18n may then be left out.
 (() => {
   const P = window.PROJECT;
   const HOME = '/adm1nsys/';
@@ -27,7 +30,7 @@
   let lang = pick(params.get('lang')) || pick(store.get()) || (store.get() ? pick('en') : null) || P.langs[0];
 
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
-  const t = (key) => P.i18n[lang]?.[key] ?? UI[lang]?.[key] ?? P.i18n.en?.[key] ?? UI.en[key] ?? '';
+  const t = (key) => P.i18n?.[lang]?.[key] ?? UI[lang]?.[key] ?? P.i18n?.en?.[key] ?? UI.en[key] ?? '';
   const ICONS = {
     chevron: '<path d="M6 9l6 6 6-6"/>',
     left: '<path d="M15 18l-6-6 6-6"/>',
@@ -43,6 +46,9 @@
     const back = fromHome
       ? `<a class="chip chip-back" href="${HOME}projects.html">${icon('left', 'icon icon-sm')}<span data-ui="back"></span></a>`
       : '';
+    const up = P.up
+      ? `<a class="chip chip-back" href="${esc(P.up.href)}${fromHome ? '?from=adm1nsys' : ''}">${icon('left', 'icon icon-sm')}<span data-en="${esc(P.up.en)}">${esc(P.up.de)}</span></a>`
+      : '';
     // One row on the left: brand, language, back — the language chip stays put either way
     header.innerHTML = `
       <div class="header-left">
@@ -55,7 +61,7 @@
             ${P.langs.map((l) => `<button type="button" data-set-lang="${l}">${LABELS[l]}</button>`).join('')}
           </div>
         </div>
-        ${back}
+        ${back}${up}
       </div>`;
     document.body.prepend(header);
 
@@ -116,10 +122,20 @@
     document.querySelectorAll('[data-i18n-html]').forEach((el) => { el.innerHTML = t(el.dataset.i18nHtml); });
     document.querySelectorAll('[data-ui]').forEach((el) => { el.textContent = t(el.dataset.ui); });
     document.querySelectorAll('[data-i18n-alt]').forEach((el) => { el.alt = t(el.dataset.i18nAlt); });
+    document.querySelectorAll('[data-en],[data-en-html]').forEach((el) => {
+      if (el.dataset.de === undefined) el.dataset.de = el.innerHTML;
+      if (lang !== 'en') el.innerHTML = el.dataset.de;
+      else if (el.dataset.enHtml !== undefined) el.innerHTML = el.dataset.enHtml;
+      else el.textContent = el.dataset.en;
+    });
     document.querySelector('[data-lang-current]').textContent = LABELS[lang];
     document.querySelector('.lang-toggle').setAttribute('aria-label', t('language'));
     document.querySelectorAll('[data-set-lang]').forEach((b) => b.classList.toggle('is-active', b.dataset.setLang === lang));
-    if (P.i18n[lang]?.title) document.title = P.i18n[lang].title;
+    const root = document.documentElement;
+    if (root.dataset.titleEn) {
+      root.dataset.titleDe ??= document.title;
+      document.title = lang === 'en' ? root.dataset.titleEn : root.dataset.titleDe;
+    } else if (P.i18n?.[lang]?.title) document.title = P.i18n[lang].title;
   }
 
   // ---------- Version history: every GitHub release with direct links to its files ----------
