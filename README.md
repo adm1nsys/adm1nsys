@@ -15,25 +15,45 @@ Native where possible, minimal everywhere: Swift for Apple platforms, C/C++ for 
 
 ## Showcase
 
-### [Concordia](https://github.com/adm1nsys/Concordia)
+### [Concordia](https://adm1nsys.github.io/Concordia/)
 `C++` `Zephyr` `Matter` `Thread`
 
-Matter-over-Thread bridge built only from microcontrollers: an ESP32-C6 with a web panel pulls data from any HTTP API, an nRF54L15 exposes it as Matter devices for Apple Home, Google Home and Alexa.
+A bridge from anything into Matter over Thread on a single nRF54L15: whatever can write a line to a serial port creates and feeds Matter devices for Apple Home, Google Home and Alexa. An ESP32-C6 that pulls values from HTTP APIs comes as a ready-made source.
+
+<p>
+  <a href="https://adm1nsys.github.io/Concordia/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
+  <a href="https://github.com/adm1nsys/Concordia"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
+</p>
 
 ### [ServerMaster](https://adm1nsys.github.io/ServerMaster/)
 `Swift` `SwiftUI` `macOS` `CLI`
 
 Local web server manager for macOS and Windows: static sites, PHP with a database, Node.js apps and custom commands — started, stopped and monitored from one window. Plus a Swift CLI.
 
-### [Micro Matter Switch](https://github.com/adm1nsys/Micro-Matter-Switch)
+<p>
+  <a href="https://adm1nsys.github.io/ServerMaster/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
+  <a href="https://github.com/adm1nsys/ServerMaster"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
+</p>
+
+### [Micro Matter Switch](https://adm1nsys.github.io/Micro-Matter-Switch/)
 `C++` `ESP32-C6` `Matter`
 
 Compact Matter switch based on the XIAO ESP32-C6 with its own 3D-printed case.
 
-### [Safari AI Extension](https://github.com/adm1nsys/Safari-Ai-Extension)
+<p>
+  <a href="https://adm1nsys.github.io/Micro-Matter-Switch/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
+  <a href="https://github.com/adm1nsys/Micro-Matter-Switch"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
+</p>
+
+### [Safari AI Extension](https://adm1nsys.github.io/Safari-Ai-Extension/)
 `JavaScript` `Safari` `iOS`
 
 Safari extension generated with Apple Intelligence and then edited by hand. A guide for developers on macOS, iOS and iPadOS 27.
+
+<p>
+  <a href="https://adm1nsys.github.io/Safari-Ai-Extension/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
+  <a href="https://github.com/adm1nsys/Safari-Ai-Extension"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
+</p>
 
 → [All projects](https://adm1nsys.github.io/adm1nsys/projects.html)
 
@@ -52,7 +72,7 @@ Safari extension generated with Apple Intelligence and then edited by hand. A gu
 
 **Nordic Semiconductor DevAcademy:** nRF54L Series Express · nRF Connect SDK Fundamentals · nRF Connect SDK Intermediate · Bluetooth Low Energy Fundamentals · Designing Low-Power Bluetooth LE Products
 
-**Heilbronn University of Applied Sciences (DAAD):** Engineering and Computer Graphics, 51 h — [certificate](web/assets/files/certificates/hhn-daad-engineering-graphics.pdf) · [coursework](https://github.com/adm1nsys/education)
+**Heilbronn University of Applied Sciences (DAAD):** Engineering and Computer Graphics, 51 h — [certificate](web/assets/files/certificates/hhn-daad-engineering-graphics.pdf) · [coursework](https://adm1nsys.github.io/education/)
 
 <sub>🇺🇦 Support Ukraine: [Come Back Alive](https://savelife.in.ua/en/) · [Serhiy Prytula Charity Foundation](https://prytulafoundation.org/en/)</sub>
 
