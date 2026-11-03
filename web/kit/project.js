@@ -13,10 +13,12 @@
   const UI = {
     de: { back: 'Projekte', source: 'Quellcode auf GitHub', latest: 'Aktuell', files: 'Dateien',
       sourceZip: 'Quellcode (zip)', noReleases: 'Noch keine Releases — die aktuelle Fassung liegt im Hauptzweig.',
-      history: 'Änderungsverlauf', more: 'Mehr anzeigen', less: 'Weniger anzeigen', loadError: 'Versionen konnten nicht geladen werden.', language: 'Sprache' },
+      history: 'Änderungsverlauf', more: 'Mehr anzeigen', less: 'Weniger anzeigen', loadError: 'Versionen konnten nicht geladen werden.', language: 'Sprache',
+      langChanged: 'Sprache geändert' },
     en: { back: 'Projects', source: 'Source on GitHub', latest: 'Latest', files: 'Files',
       sourceZip: 'Source code (zip)', noReleases: 'No releases yet — the current version is on the main branch.',
-      history: 'Change history', more: 'Show more', less: 'Show less', loadError: 'Could not load the versions.', language: 'Language' }
+      history: 'Change history', more: 'Show more', less: 'Show less', loadError: 'Could not load the versions.', language: 'Language',
+      langChanged: 'Language changed' }
   };
 
   const store = {
@@ -108,12 +110,28 @@
     list.addEventListener('click', (e) => {
       const button = e.target.closest('[data-set-lang]');
       if (!button) return;
+      const changed = button.dataset.setLang !== lang;
       lang = button.dataset.setLang;
       store.set(lang);
       setOpen(false);
       applyLanguage();
       renderReleases();
+      if (changed) showLangHud();
     });
+  }
+
+  // Same HUD as the main site (styles in style.css): the new language code, briefly, mid-screen
+  function showLangHud() {
+    document.querySelector('.lang-hud')?.remove();
+    const hud = document.createElement('div');
+    hud.className = 'lang-hud';
+    hud.setAttribute('role', 'status');
+    hud.innerHTML = `<span class="lang-hud-code">${LABELS[lang]}</span><span class="lang-hud-text">${esc(t('langChanged'))}</span>`;
+    document.body.append(hud);
+    void hud.offsetWidth;
+    hud.classList.add('is-visible');
+    setTimeout(() => hud.classList.remove('is-visible'), 1000);
+    setTimeout(() => hud.remove(), 1500);
   }
 
   function applyLanguage() {

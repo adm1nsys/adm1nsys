@@ -17,6 +17,7 @@
     note: '<path d="M9 18V5l11-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="17" cy="16" r="3"/>',
     link: '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
     chevron: '<path d="M6 9l6 6 6-6"/>',
+    left: '<path d="M15 18l-6-6 6-6"/>',
     arrow: '<path d="M7 17L17 7M8 7h9v9"/>'
   };
   const icon = (name, cls = 'icon') =>
@@ -62,6 +63,7 @@
             <button type="button" class="lang-close" data-i18n-aria="close">✕</button>
           </div>
         </div>
+        ${['about', 'menu'].includes(page) ? '' : `<a class="chip chip-back" href="index.html" data-back>${icon('left', 'icon icon-sm')}<span data-i18n="back">${t('back')}</span></a>`}
       </div>
       <button class="chip menu-toggle" type="button" aria-controls="menu" aria-expanded="false" data-i18n="menu">${t('menu')}</button>`;
     document.body.prepend(header);
