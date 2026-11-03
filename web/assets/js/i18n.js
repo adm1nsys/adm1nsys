@@ -126,6 +126,7 @@ window.I18N = {
     p_edu: 'Ausgewählte Arbeiten aus Kolleg und Universität: Computernetze in Cisco Packet Tracer, AutoCAD-Zeichnungen, Abschlussprojekt, Magazinlayout.',
     certView: 'Ansehen',
     p_grid: 'Rechner für modulare Layout-Raster im Webdesign.'
+    p_handy: 'Ein Smartphone aus reinem CSS 3D — rund 370 von Hand positionierte Elemente, ohne 3D-Bibliothek — mit funktionierendem Musikplayer. Gebaut 2023.',
   },
 
   en: {
@@ -246,6 +247,7 @@ window.I18N = {
     p_edu: 'Selected work from college and university: computer networks in Cisco Packet Tracer, AutoCAD drawings, diploma project, magazine layout.',
     certView: 'View',
     p_grid: 'Calculator for modular layout grids in web design.'
+    p_handy: 'A smartphone in pure CSS 3D — about 370 hand-positioned elements, no 3D library — with a working music player. Built in 2023.',
   },
 
   uk: {
@@ -366,6 +368,7 @@ window.I18N = {
     p_edu: 'Вибрані роботи з коледжу та університету: комп’ютерні мережі в Cisco Packet Tracer, креслення в AutoCAD, дипломний проєкт, верстка журналу.',
     certView: 'Переглянути',
     p_grid: 'Калькулятор модульних сіток для веб-дизайну.'
+    p_handy: 'Смартфон на чистому CSS 3D — близько 370 вручну розставлених елементів, без 3D-бібліотеки — з робочим музичним плеєром. Зроблено 2023 року.',
   },
 
   ru: {
@@ -486,6 +489,7 @@ window.I18N = {
     p_edu: 'Избранные работы из колледжа и университета: компьютерные сети в Cisco Packet Tracer, чертежи в AutoCAD, дипломный проект, вёрстка журнала.',
     certView: 'Открыть',
     p_grid: 'Калькулятор модульных сеток для веб-дизайна.'
+    p_handy: 'Смартфон на чистом CSS 3D — около 370 вручную расставленных элементов, без 3D-библиотеки — с рабочим музыкальным плеером. Сделан в 2023 году.',
   },
   da: {
     menu: 'Menu',
@@ -593,6 +597,7 @@ window.I18N = {
     p_edu: 'Udvalgte arbejder fra college og universitet: computernetværk i Cisco Packet Tracer, AutoCAD-tegninger, afgangsprojekt, magasinlayout.',
     certView: 'Se',
     p_grid: 'Beregner til modulære layoutgrids i webdesign.'
+    p_handy: 'En smartphone i ren CSS 3D — omkring 370 håndplacerede elementer, uden 3D-bibliotek — med en fungerende musikafspiller. Bygget i 2023.',
   },
   fr: {
     menu: 'Menu',
@@ -700,5 +705,6 @@ window.I18N = {
     p_edu: 'Travaux choisis du collège et de l’université : réseaux informatiques dans Cisco Packet Tracer, dessins AutoCAD, projet de fin d’études, mise en page d’un magazine.',
     certView: 'Voir',
     p_grid: 'Calculateur de grilles de mise en page modulaires pour le web design.'
+    p_handy: 'Un smartphone en pur CSS 3D — environ 370 éléments placés à la main, sans bibliothèque 3D — avec un lecteur de musique fonctionnel. Créé en 2023.',
   }
 };
