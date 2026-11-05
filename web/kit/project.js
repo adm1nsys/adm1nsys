@@ -14,11 +14,11 @@
     de: { back: 'Projekte', source: 'Quellcode auf GitHub', latest: 'Aktuell', files: 'Dateien',
       sourceZip: 'Quellcode (zip)', noReleases: 'Noch keine Releases — die aktuelle Fassung liegt im Hauptzweig.',
       history: 'Änderungsverlauf', more: 'Mehr anzeigen', less: 'Weniger anzeigen', loadError: 'Versionen konnten nicht geladen werden.', language: 'Sprache',
-      langChanged: 'Sprache geändert' },
+      langChanged: 'Sprache geändert', privacy: 'Datenschutz' },
     en: { back: 'Projects', source: 'Source on GitHub', latest: 'Latest', files: 'Files',
       sourceZip: 'Source code (zip)', noReleases: 'No releases yet — the current version is on the main branch.',
       history: 'Change history', more: 'Show more', less: 'Show less', loadError: 'Could not load the versions.', language: 'Language',
-      langChanged: 'Language changed' }
+      langChanged: 'Language changed', privacy: 'Privacy' }
   };
 
   const store = {
@@ -80,6 +80,7 @@
         <span class="footer-links">
           <a href="${HOME}">adm1nsys</a>
           <a href="https://github.com/${P.repo}" target="_blank" rel="noopener" data-ui="source"></a>
+          <a href="${HOME}datenschutz.html" data-ui="privacy"></a>
         </span>
       </div>`;
     document.body.append(footer);

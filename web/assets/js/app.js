@@ -92,6 +92,7 @@
         <span>© ${new Date().getFullYear()} ${esc(SITE.name)}</span>
         <span class="footer-links">
           <a href="links.html#ukraine" data-i18n="footerUkraine">${t('footerUkraine')}</a>
+          <a href="datenschutz.html" data-i18n="footerPrivacy">${t('footerPrivacy')}</a>
           <a href="${SITE.repo}" target="_blank" rel="noopener" data-i18n="footerSource">${t('footerSource')}</a>
         </span>
       </div>`;
@@ -219,6 +220,14 @@
     });
   }
 
+  // Apple's player is only loaded after the visitor agrees: it sends their IP address to Apple
+  const APPLE_KEY = 'adm1nsys.appleMusic';
+  const appleConsent = {
+    get() { try { return localStorage.getItem(APPLE_KEY) === '1'; } catch { return false; } },
+    set(on) { try { on ? localStorage.setItem(APPLE_KEY, '1') : localStorage.removeItem(APPLE_KEY); } catch { /* private mode */ } }
+  };
+  let appleSession = false;
+
   function renderMusic() {
     const root = document.querySelector('[data-playlists]');
     if (!root) return;
@@ -226,16 +235,34 @@
       root.innerHTML = `<p class="empty" data-i18n="musicEmpty">${t('musicEmpty')}</p>`;
       return;
     }
+    const allowed = appleSession || appleConsent.get();
     root.innerHTML = SITE.playlists.map((p) => `
       <article class="playlist card">
-        <iframe src="${esc(p.url.replace('://music.apple.com', '://embed.music.apple.com'))}"
+        ${allowed ? `<iframe src="${esc(p.url.replace('://music.apple.com', '://embed.music.apple.com'))}"
           title="${esc(p.title || 'Apple Music')}" loading="lazy"
           allow="autoplay *; encrypted-media *; clipboard-write"
-          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"></iframe>
+          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"></iframe>`
+        : `<div class="playlist-consent">
+          <strong>${esc(p.title || 'Apple Music')}</strong>
+          <p data-i18n-html="musicConsent">${t('musicConsent')}</p>
+          <button class="btn btn-primary" type="button" data-apple-load data-i18n="musicLoad">${t('musicLoad')}</button>
+          <label class="playlist-remember"><input type="checkbox" data-apple-remember> <span data-i18n="musicRemember">${t('musicRemember')}</span></label>
+        </div>`}
         <a class="text-link" href="${esc(p.url)}" target="_blank" rel="noopener">
           <span data-i18n="musicOpen">${t('musicOpen')}</span>${icon('arrow', 'icon icon-sm')}
         </a>
-      </article>`).join('');
+      </article>`).join('') + (appleConsent.get()
+      ? `<p class="playlist-off"><button class="linklike" type="button" data-apple-off data-i18n="musicForget">${t('musicForget')}</button></p>` : '');
+    root.querySelectorAll('[data-apple-load]').forEach((button) => button.addEventListener('click', () => {
+      appleSession = true;
+      if (button.parentElement.querySelector('[data-apple-remember]').checked) appleConsent.set(true);
+      renderMusic();
+    }));
+    root.querySelector('[data-apple-off]')?.addEventListener('click', () => {
+      appleConsent.set(false);
+      appleSession = false;
+      renderMusic();
+    });
   }
 
   function renderLinks() {
