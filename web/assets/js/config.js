@@ -30,6 +30,7 @@ window.SITE = {
   // Also listed in the contact block on the main page
   socials: [
     { name: 'GitHub', handle: '@adm1nsys', url: 'https://github.com/adm1nsys' },
+    { name: 'npm', handle: '~adm1nsys', url: 'https://www.npmjs.com/~adm1nsys' },
     { name: 'Figma', handle: '@adminpro', url: 'https://www.figma.com/@adminpro' },
     { name: 'Instagram', handle: '@_george_.jpg', url: 'https://www.instagram.com/_george_.jpg/' },
     { name: 'Instagram · Design', handle: '@_george_.png', url: 'https://www.instagram.com/_george_.png/' },
