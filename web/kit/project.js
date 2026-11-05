@@ -175,23 +175,62 @@
     bindDownloads();
   }
 
-  // Release notes are Markdown; enough of it for GitHub-style notes: lists, `code`, **bold**, links
+  // Release notes are Markdown; enough of it for GitHub-style notes: headings, paragraphs and list items
+  // wrapped over several lines, ordered lists, tables, code blocks, `code`, **bold**, *italic*, links
   function notes(text) {
     const inline = (s) => esc(s)
       .replace(/`([^`]+)`/g, '<code>$1</code>')
       .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/(^|[\s(])\*([^*\s][^*]*)\*/g, '$1<em>$2</em>')
       .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+    const cells = (row) => row.trim().replace(/^\||\|$/g, '').split('|').map((c) => c.trim());
+    const lines = text.trim().split(/\r?\n/);
     let html = '';
-    let list = false;
-    for (const line of text.trim().split(/\r?\n/)) {
-      const item = line.match(/^\s*[-*]\s+(.*)/);
-      if (item && !list) { html += '<ul>'; list = true; }
-      if (!item && list) { html += '</ul>'; list = false; }
-      if (item) html += `<li>${inline(item[1])}</li>`;
-      else if (/^#+\s/.test(line)) html += `<p><strong>${inline(line.replace(/^#+\s/, ''))}</strong></p>`;
-      else if (line.trim()) html += `<p>${inline(line)}</p>`;
+    let block = null; // { tag: 'p' } or { tag: 'ul' | 'ol', items: [] }
+    let para = [];
+    const flush = () => {
+      if (para.length) html += `<p>${inline(para.join(' '))}</p>`;
+      para = [];
+      if (block) html += `<${block.tag}>${block.items.map((i) => `<li>${inline(i)}</li>`).join('')}</${block.tag}>`;
+      block = null;
+    };
+    for (let i = 0; i < lines.length; i++) {
+      const line = lines[i];
+      if (/^\s*```/.test(line)) {
+        flush();
+        const code = [];
+        while (++i < lines.length && !/^\s*```/.test(lines[i])) code.push(lines[i]);
+        html += `<pre><code>${esc(code.join('\n'))}</code></pre>`;
+        continue;
+      }
+      if (/^\s*\|/.test(line)) {
+        flush();
+        const rows = [];
+        for (; i < lines.length && /^\s*\|/.test(lines[i]); i++) rows.push(lines[i]);
+        i--;
+        const body = rows.filter((r) => !/^\s*\|?[\s:|-]+\|?\s*$/.test(r)).map(cells);
+        const [head, ...rest] = body;
+        html += `<table><thead><tr>${head.map((c) => `<th>${inline(c)}</th>`).join('')}</tr></thead>`
+          + `<tbody>${rest.map((r) => `<tr>${r.map((c) => `<td>${inline(c)}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+        continue;
+      }
+      if (!line.trim()) { flush(); continue; }
+      const heading = line.match(/^#+\s+(.*)/);
+      if (heading) { flush(); html += `<p class="notes-heading"><strong>${inline(heading[1])}</strong></p>`; continue; }
+      const item = line.match(/^\s*(?:([-*])|(\d+)[.)])\s+(.*)/);
+      if (item) {
+        const tag = item[1] ? 'ul' : 'ol';
+        if (para.length || (block && block.tag !== tag)) flush();
+        block ??= { tag, items: [] };
+        block.items.push(item[3]);
+        continue;
+      }
+      // A plain line continues the open list item or paragraph (Markdown wraps them freely)
+      if (block) block.items[block.items.length - 1] += ' ' + line.trim();
+      else para.push(line.trim());
     }
-    return html + (list ? '</ul>' : '');
+    flush();
+    return html;
   }
 
   function renderReleases() {

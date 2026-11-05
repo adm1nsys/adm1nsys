@@ -90,7 +90,14 @@ th { font: 500 12px/1.4 var(--mono); text-transform: uppercase; letter-spacing: 
 .release-notes.is-open .release-notes-text { --notes-fade: 0px; }
 .notes-toggle { padding: 0; border: 0; background: none; color: var(--text); font: 500 12px/1.6 var(--mono); cursor: pointer; text-decoration: underline; text-decoration-color: var(--line); text-underline-offset: 3px; }
 .notes-toggle:hover { text-decoration-color: currentColor; }
-.release-notes p, .release-notes ul { margin: 0 0 0.5rem; }
-.release-notes ul { padding-left: 1.25rem; }
+.release-notes p, .release-notes ul, .release-notes ol, .release-notes pre, .release-notes table { margin: 0 0 0.5rem; }
+.release-notes ul, .release-notes ol { padding-left: 1.25rem; }
+.release-notes li + li { margin-top: 0.2rem; }
+.release-notes .notes-heading { margin-top: 0.9rem; }
+.release-notes .notes-heading:first-child { margin-top: 0; }
+.release-notes table { display: block; border-collapse: collapse; }
+.release-notes th, .release-notes td { padding: 0.35rem 0.75rem 0.35rem 0; border-bottom: 1px solid var(--line-soft); text-align: left; vertical-align: top; }
+.release-notes th { font-weight: 600; }
+.release-notes pre { padding: 0.6rem 0.75rem; border-radius: 8px; background: var(--panel-solid, rgba(127,127,127,.08)); }
 .release-files { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 
