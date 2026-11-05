@@ -15,44 +15,26 @@ Native where possible, minimal everywhere: Swift for Apple platforms, C/C++ for 
 
 ## Showcase
 
-### [Concordia](https://adm1nsys.github.io/Concordia/)
-`C++` `Zephyr` `Matter` `Thread`
-
-A bridge from anything into Matter over Thread on a single nRF54L15: whatever can write a line to a serial port creates and feeds Matter devices for Apple Home, Google Home and Alexa. An ESP32-C6 that pulls values from HTTP APIs comes as a ready-made source.
-
-<p>
-  <a href="https://adm1nsys.github.io/Concordia/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
-  <a href="https://github.com/adm1nsys/Concordia"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
-</p>
-
 ### [ServerMaster](https://adm1nsys.github.io/ServerMaster/about/)
-`Swift` `SwiftUI` `macOS` `CLI`
+`Swift` `SwiftUI` `macOS` `Windows` `CLI`
 
-Local web server manager for macOS and Windows: static sites, PHP with a database, Node.js apps and custom commands — started, stopped and monitored from one window. Plus a Swift CLI.
+Local web server manager for macOS and Windows: static sites, PHP with a database, Node.js apps and custom commands — started, stopped and monitored from one window. My largest project and my first app for Windows; a Swift CLI is in the works.
+
+<a href="https://adm1nsys.github.io/ServerMaster/about/"><img src="https://adm1nsys.github.io/ServerMaster/assets/control.webp" alt="ServerMaster control window" width="100%"></a>
 
 <p>
   <a href="https://adm1nsys.github.io/ServerMaster/about/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
   <a href="https://github.com/adm1nsys/ServerMaster"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
 </p>
 
-### [Micro Matter Switch](https://adm1nsys.github.io/Micro-Matter-Switch/)
-`C++` `ESP32-C6` `Matter`
+### [Concordia](https://adm1nsys.github.io/Concordia/)
+`C++` `Zephyr` `Matter` `Thread`
 
-Compact Matter switch based on the XIAO ESP32-C6 with its own 3D-printed case.
-
-<p>
-  <a href="https://adm1nsys.github.io/Micro-Matter-Switch/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
-  <a href="https://github.com/adm1nsys/Micro-Matter-Switch"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
-</p>
-
-### [Safari AI Extension](https://adm1nsys.github.io/Safari-Ai-Extension/)
-`JavaScript` `Safari` `iOS`
-
-Safari extension generated with Apple Intelligence and then edited by hand. A guide for developers on macOS, iOS and iPadOS 27.
+A bridge from anything into Matter over Thread on a single nRF54L15: whatever can write a line to a serial port creates and feeds Matter devices for Apple Home, Google Home and Alexa.
 
 <p>
-  <a href="https://adm1nsys.github.io/Safari-Ai-Extension/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
-  <a href="https://github.com/adm1nsys/Safari-Ai-Extension"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
+  <a href="https://adm1nsys.github.io/Concordia/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
+  <a href="https://github.com/adm1nsys/Concordia"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
 </p>
 
 → [All projects](https://adm1nsys.github.io/adm1nsys/projects.html)
