@@ -2,7 +2,7 @@
 // directly into the HTML, so the pages read correctly before this file runs.
 // Keys used with data-i18n-html may contain links.
 const link = (href, text) => `<a href="${href}" target="_blank" rel="noopener">${text}</a>`;
-const SERVERMASTER = link('https://adm1nsys.github.io/ServerMaster/?from=adm1nsys', 'ServerMaster');
+const SERVERMASTER = link('https://adm1nsys.github.io/ServerMaster/about/?from=adm1nsys', 'ServerMaster');
 const MAZE = 'https://adm1nsys.github.io/education/college/2024-diploma-micromouse/';
 const CONCORDIA = link('https://adm1nsys.github.io/Concordia/?from=adm1nsys', 'Concordia');
 const UF2 = 'https://adm1nsys.github.io/Adafruit-UF2-bootloader-auto-flash/?from=adm1nsys';

@@ -25,13 +25,13 @@ A bridge from anything into Matter over Thread on a single nRF54L15: whatever ca
   <a href="https://github.com/adm1nsys/Concordia"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
 </p>
 
-### [ServerMaster](https://adm1nsys.github.io/ServerMaster/)
+### [ServerMaster](https://adm1nsys.github.io/ServerMaster/about/)
 `Swift` `SwiftUI` `macOS` `CLI`
 
 Local web server manager for macOS and Windows: static sites, PHP with a database, Node.js apps and custom commands — started, stopped and monitored from one window. Plus a Swift CLI.
 
 <p>
-  <a href="https://adm1nsys.github.io/ServerMaster/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
+  <a href="https://adm1nsys.github.io/ServerMaster/about/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
   <a href="https://github.com/adm1nsys/ServerMaster"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
 </p>
 
@@ -68,7 +68,7 @@ Safari extension generated with Apple Intelligence and then edited by hand. A gu
 | **Languages** | `Swift` `C` `C++` `JavaScript` `HTML` `CSS` |
 | **Frameworks & SDKs** | `SwiftUI` `Arduino` `nRF Connect SDK (Zephyr)` `Matter` `Thread` |
 | **Boards** | `nRF54L15 DK` `XIAO nRF54L15` `XIAO ESP32-C6` `ESP8266 DevKit` `nice!nano v2` `Luckfox Pico` `Luckfox Pico Max` |
-| **IDE & tools** | `Xcode` `VS Code` `Arduino IDE` [`ServerMaster`](https://adm1nsys.github.io/ServerMaster/) `Figma` `Git` |
+| **IDE & tools** | `Xcode` `VS Code` `Arduino IDE` [`ServerMaster`](https://adm1nsys.github.io/ServerMaster/about/) `Figma` `Git` |
 
 **Nordic Semiconductor DevAcademy:** nRF54L Series Express · nRF Connect SDK Fundamentals · nRF Connect SDK Intermediate · Bluetooth Low Energy Fundamentals · Designing Low-Power Bluetooth LE Products
 
