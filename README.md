@@ -20,21 +20,19 @@ Native where possible, minimal everywhere: Swift for Apple platforms, C/C++ for 
 
 Local web server manager for macOS and Windows: static sites, PHP with a database, Node.js apps and custom commands — started, stopped and monitored from one window. My largest project and my first app for Windows; a Swift CLI is in the works.
 
-<a href="https://adm1nsys.github.io/ServerMaster/about/"><img src="https://adm1nsys.github.io/ServerMaster/assets/control.webp" alt="ServerMaster control window" width="100%"></a>
-
 <p>
   <a href="https://adm1nsys.github.io/ServerMaster/about/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
   <a href="https://github.com/adm1nsys/ServerMaster"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
 </p>
 
-### [Concordia](https://adm1nsys.github.io/Concordia/)
-`C++` `Zephyr` `Matter` `Thread`
+### [Fernsprecher-KI-Modus](https://adm1nsys.github.io/Fernsprecher-KI-Modus/)
+`Swift` `macOS` `FaceTime` `AI agents`
 
-A bridge from anything into Matter over Thread on a single nRF54L15: whatever can write a line to a serial port creates and feeds Matter devices for Apple Home, Google Home and Alexa.
+A macOS app and CLI that lets any terminal-based AI agent join a FaceTime call as a guest by link: on-device speech recognition, natural voices and a live status tile.
 
 <p>
-  <a href="https://adm1nsys.github.io/Concordia/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
-  <a href="https://github.com/adm1nsys/Concordia"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
+  <a href="https://adm1nsys.github.io/Fernsprecher-KI-Modus/"><img alt="Website" src="https://img.shields.io/badge/Website-070707?style=for-the-badge&logo=safari&logoColor=white"></a>
+  <a href="https://github.com/adm1nsys/Fernsprecher-KI-Modus"><img alt="GitHub repository" src="https://img.shields.io/badge/GitHub-070707?style=for-the-badge&logo=github&logoColor=white"></a>
 </p>
 
 → [All projects](https://adm1nsys.github.io/adm1nsys/projects.html)
