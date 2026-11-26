@@ -54,7 +54,7 @@ A macOS app and CLI that lets any terminal-based AI agent join a FaceTime call a
 
 **Heilbronn University of Applied Sciences (DAAD):** Engineering and Computer Graphics, 51 h — [certificate](web/assets/files/certificates/hhn-daad-engineering-graphics.pdf) · [coursework](https://adm1nsys.github.io/education/)
 
-<sub>🇺🇦 Support Ukraine: [Come Back Alive](https://savelife.in.ua/en/) · [Serhiy Prytula Charity Foundation](https://prytulafoundation.org/en/)</sub>
+<sub>🇺🇦 Support Ukraine: [Come Back Alive](https://savelife.in.ua/en/)</sub>
 
 <p align="center">
   <img src="assets/github-snake.svg" alt="Contribution graph eaten by a snake" width="100%">
